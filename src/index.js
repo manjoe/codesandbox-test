@@ -14,18 +14,23 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   completeButton.addEventListener("click", () => {
-    //押された完了ボタンの親タグ(div)を取得
-    const completeTarget = completeButton.parentNode;
     //未完了リストから削除する
-    deleteFromIncompleteList(completeTarget);
-    // 完了ボタンを削除する
-    completeTarget.removeChild(completeButton);
-    // 削除ボタンを削除する
-    completeTarget.removeChild(deleteButton);
-    // 戻るボタンを追加する
-    completeTarget.appendChild(backButton);
+    deleteFromIncompleteList(completeButton.parentNode);
     // 完了リストに追加する
-    document.getElementById("complete-list").appendChild(completeTarget);
+    const addTarget = completeButton.parentNode;
+    // ToDo内容テキストを取得
+    const text = addTarget.firstElementChild.innerText;
+    // div以下を初期化
+    addTarget.textContent = null;
+    // liタグを生成
+    const li = document.createElement("li");
+    li.innerText = text;
+    // divタグの子要素に各要素を設定
+    addTarget.appendChild(li);
+    addTarget.appendChild(backButton);
+    console.log(addTarget);
+    // 完了リストに追加
+    document.getElementById("complete-list").appendChild(addTarget);
     // console.log(completeTarget);
   });
   // button(削除)タグを作成
@@ -38,7 +43,7 @@ const onClickAdd = () => {
   });
   // button(戻す)タグを作成
   const backButton = document.createElement("button");
-  backButton.innerText = "戻る";
+  backButton.innerText = "戻す";
   // divタグの子要素に各要素を設定
   div.appendChild(li);
   div.appendChild(completeButton);
