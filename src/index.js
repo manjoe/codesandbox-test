@@ -91,16 +91,24 @@ console.log(val3);
 // console.log(func3(10, 20));
 
 /**
- * 分割代入　ES2015から
+ * 分割代入　ES2015から　知らないと読めないコード
  */
-const myProfile = {
-  name: "じゃけ",
-  age: 28
-};
+// const myProfile = {
+//   name: "じゃけ",
+//   age: 28
+// };
 
-const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
-console.log(message1);
-// 変数名が長いと冗長
+// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(message1);
+// // 変数名が長いと冗長
 
-const { name, age } = myProfile;
-const message2 = `名前は${name}です。年齢は${age}です。`;
+// const { name, age } = myProfile;
+// const message2 = `名前は${name}です。年齢は${age}です。`;
+
+const myProfile = ["じゃけ", 28];
+const message3 = `名前は${myProfile[0]}です。年連は${myProfile[1]}です。`;
+console.log(message3);
+// 順番に取り出す
+const [name, age] = myProfile;
+const message4 = `名前は${name}です。年齢は${age}です。`;
+console.log(message4);
