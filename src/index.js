@@ -105,10 +105,19 @@ console.log(val3);
 // const { name, age } = myProfile;
 // const message2 = `名前は${name}です。年齢は${age}です。`;
 
-const myProfile = ["じゃけ", 28];
-const message3 = `名前は${myProfile[0]}です。年連は${myProfile[1]}です。`;
-console.log(message3);
-// 順番に取り出す
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}です。`;
-console.log(message4);
+// const myProfile = ["じゃけ", 28];
+// const message3 = `名前は${myProfile[0]}です。年連は${myProfile[1]}です。`;
+// console.log(message3);
+// // 順番に取り出す
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message4);
+
+/**
+ * デフォルト値、引数など
+ */
+
+const sayHello = (name = "ゲスト") => console.log(`こんにちは!${name}さん!`);
+sayHello("じゃけ"); //こんにちは!じゃけさん!
+sayHello(); //こんにちは!undefinedさん!
+// name = "ゲスト"と初期値を代入することもできる。未指定の場合undefindになり、バグの温床となりやすい
