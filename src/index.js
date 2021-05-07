@@ -72,20 +72,35 @@ console.log(val3);
 // function func1(str) {
 //   return str;
 // }
-const func1 = function (str) {
-  return str;
-};
-console.log(func1("func1です"));
+// const func1 = function (str) {
+//   return str;
+// };
+// console.log(func1("func1です"));
 
 // アロー関数
 // const func2 = (str) => {
 //   return str;
 // };
 // 処理1行でかける場合などはブラケットを省略できる
-const func2 = (str) => str;
-console.log(func2("func2です"));
+// const func2 = (str) => str;
+// console.log(func2("func2です"));
 
-const func3 = (num1, num2) => {
-  return num1 + num2;
+// const func3 = (num1, num2) => {
+//   return num1 + num2;
+// };
+// console.log(func3(10, 20));
+
+/**
+ * 分割代入　ES2015から
+ */
+const myProfile = {
+  name: "じゃけ",
+  age: 28
 };
-console.log(func3(10, 20));
+
+const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+console.log(message1);
+// 変数名が長いと冗長
+
+const { name, age } = myProfile;
+const message2 = `名前は${name}です。年齢は${age}です。`;
