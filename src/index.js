@@ -219,12 +219,12 @@ const nameArr = ["田中", "山田", "じゃけ"];
 //   console.log("1も2もTrueになります");
 // }
 
-// || は左側がfalseとなるとき右側を返す
-const num = null;
-const fee = num || "金額未設定です";
-console.log(fee);
+// // || は左側がfalseとなるとき右側を返す
+// const num = null;
+// const fee = num || "金額未設定です";
+// console.log(fee);
 
-// && は左側がtrueなら右側を返す
-const num2 = 100;
-const fee2 = num2 && "何か設定されました";
-console.log(fee2);
+// // && は左側がtrueなら右側を返す
+// const num2 = 100;
+// const fee2 = num2 && "何か設定されました";
+// console.log(fee2);
