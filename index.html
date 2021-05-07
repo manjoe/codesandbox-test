@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="src/styles.css">
+	<link rel="script" href="src/index.js">
 	<title>ToDo（JS）</title>
 	<meta charset="UTF-8" />
 
@@ -10,12 +11,12 @@
 
 <body>
 	<div class="input-area">
-		<input placeholder="ToDoを入力" />
-		<button>追加</button>
+		<input id="add-text" placeholder="ToDoを入力" />
+		<button id="add-button">追加</button>
 	</div>
 	<div class="incomplete-area">
 		<p class="title">未完了のToDo</p>
-		<ul>
+		<ul id="incomplete-list">
 			<div class="list-row">
 				<li>ToDoです</li>
 				<button>完了</button>
